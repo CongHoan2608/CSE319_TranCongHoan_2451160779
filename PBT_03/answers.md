@@ -42,3 +42,12 @@ h1 {
 - Nhược điểm: Trình duyệt mất thêm một chút thời gian để gửi yêu cầu tải file CSS từ server về.
 - Nên dùng khi: Đây là chuẩn production, luôn được khuyến khích sử dụng cho mọi dự án web thực tế.
 
+### Câu A2: CSS Selectors-Dự đoán kết quả
+1. h1                           → Chọn: `ShopTLU`
+2. .price                       → Chọn: `25.990.000đ` và `45.990.000đ`
+3. #app header                  → Chọn: Toàn bộ văn bản bên trong thẻ header, bao gồm: `ShopTLU`, `Home`, `Products`, `Anout`
+4. nav a:first-child             → Chọn: `Home` (thẻ liên kết đầu tiên trong thẻ nav)
+5. .product.featured h2         → Chọn: `MacBook Pro` (thẻ h2 trong main có class="product featured")
+6. article > p                  → Chọn: `25.990.000đ`, `Mô tả sản phẩm ...`, `45.990.000đ`, `Mô tả sản phẩm...`
+7. a[href="/"]                  → Chọn: `Home` (thẻ liên kết có giá trị thuộc tính href chính xác là "/")
+8. .top-bar.dark h1              → Chọn: `ShopTLU` (Thẻ h1 nằm bên trong class="top-bar dark")
