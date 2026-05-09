@@ -84,3 +84,22 @@ h1 {
 ```
 Nâng cao: Nếu .box-a có margin-bottom: -10px và .box-b có margin-top: 40px
 - khoảng cách = 40 + (-10) = 30px
+
+### Câu A4: Specificity (Độ ưu tiên)
+1. Tính specificity score (a, b, c) cho mỗi rule:
+- Rule A(`p`): Score = (0, 0, 1) (vì chỉ có 1 thẻ element).
+- Rule B(`.price`): Score = (0, 1, 0) (vì chỉ có 1 class).
+- Rule C(`#main-price`): Score = (1, 0, 0) (vì chỉ có 1 ID).
+- Rule D(`p.price`): Score = (0,1,1) (vì có 1 thẻ element và 1 class).
+
+2. Element sẽ có màu gì? Giải thích:
+- Element sẽ có màu `red (đỏ)`.
+- Vì theo bảng tính specificity, các selector của A, B, C, D có specificity lần lượt là 1 , 10, 100, 11. Do selector C(`#main-price`) có specificity cao nhất nên style của nó được áp dụng lên phần tử.
+
+3. Nếu thêm `<p class="price" id="main-price" style="color: orange;">`:
+- element sẽ có màu `orange (cam)`.
+- Vì Inline style (specificity=1000) luôn có độ ưu tiên cao hơn tất cả các bộ chọn trong file CSS bên ngoài.
+
+4. Nếu Rule A thêm `!important`:
+- element sẽ có màu 'black(đen)'.
+- Vì selector `!important` có độ ưu tiên cao nhất(specificity=vô cực), trong CSS nó ghi đè lên tất cả các quy tắc về độ ưu tiên thông thường nên khi thêm nó vào Rule A thì style của nó được áp dụng lên phần tử.
