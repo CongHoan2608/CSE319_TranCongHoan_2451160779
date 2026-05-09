@@ -51,3 +51,36 @@ h1 {
 6. article > p                  → Chọn: `25.990.000đ`, `Mô tả sản phẩm ...`, `45.990.000đ`, `Mô tả sản phẩm...`
 7. a[href="/"]                  → Chọn: `Home` (thẻ liên kết có giá trị thuộc tính href chính xác là "/")
 8. .top-bar.dark h1              → Chọn: `ShopTLU` (Thẻ h1 nằm bên trong class="top-bar dark")
+
+### Câu A3: Box Model-Tính toán kích thước
+```css
+/* Trường hợp 1: content-box (mặc định) */
+.box-1 {
+    width: 400px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+}
+→ Chiều rộng hiển thị = 400 + 20 x 2 + 5 x 2 = 450px
+→ Không gian chiếm trên trang = 450 + 10 x 2 = 470px
+
+/* Trường hợp 2: border-box */
+.box-2 {
+    box-sizing: border-box;
+    width: 400px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+}
+→ Chiều rộng hiển thị = 400px
+→ Kích thước content thực tế = 400 - 20 x 2 - 5 x 2 = 350px 
+→ Không gian chiếm trên trang = 400 + 10 x 2 = 420px
+
+/* Trường hợp 3: Margin collapse */
+.box-a { margin-bottom: 25px; }
+.box-b { margin-top: 40px; }
+→ Khoảng cách giữa box-a và box-b = 40px
+→ KHÔNG PHẢI 65px vì theo quy tắc CSS lấy giá trị lớn hơn giữa hai lề tiếp xúc.
+```
+Nâng cao: Nếu .box-a có margin-bottom: -10px và .box-b có margin-top: 40px
+- khoảng cách = 40 + (-10) = 30px
