@@ -1,0 +1,63 @@
+*{
+box-sizing: border-box; 
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color:white;
+    color: #333;
+    line-height: center;
+}
+
+header {
+    background: linear-gradient(to right, #004e92, #000428);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: blue;
+}
+
+nav a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+nav a.active{
+    color: green;
+    font-weight: bold;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+table th, table td{
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+table thead tr{
+    background-color: #2c3e50;
+    color: white;
+}
+
+table tbody tr:nth-child(even){
+    background-color: #e8f4fd;
+}
+
+#contact {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+}

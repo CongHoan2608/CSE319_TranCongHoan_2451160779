@@ -146,3 +146,12 @@ Nâng cao: Nếu .box-a có margin-bottom: -10px và .box-b có margin-top: 40px
 4. "Mô tả sản phẩm B"(thẻ p.highlight)
 - `color = green`
     - color có sự tranh chấp của `.card p { color: inherit; }` và `.highlight { color: green !important; }` . Do `!important` có quyền ưu tiên cao nhất nên màu hiển thị sẽ là màu green.
+
+## Phần B
+### Câu B1: Style trang Profile
+- 5 loại selector khác nhau:
+    - Element Selector: `body`, `header`, `table`, `nav a`
+    - Class Selector: `.active`
+    - ID Selector: `#contact`
+    - Descendant Selector: `nav ul li`, `table th`, `table thead tr`
+    - Pseudo-class: `:hover`, `:nth-child(even)`
