@@ -125,3 +125,24 @@ Nâng cao: Nếu .box-a có margin-bottom: -10px và .box-b có margin-top: 40px
     - Ta trừ bớt width đi đúng bằng khoảng padding và border để tổng chiều rộng thực tế bằng width tổng thể.
     - Sidebar mới: width = 300 - 20x2 - 1x2 = 258px
     - Content mới: width = 660 - 20x2 - 1x2 = 598px
+
+### Câu C2: Cascade Puzzle
+1. "Sản phẩm A"(h2):
+- `font-size = 20px`
+- `color = green`
+    - font-size: Selector `.card .title` nhắm trực tiếp thẻ h2 với điểm Specificity là (0, 2, 0). Nên nó ghi đề lên giá trị kế thừa từ `body` và `.container`.
+    - color : Có 2 selector cùng nhắm vào là `#featured .title` và `.highlight`. Tuy nhiên, selector `.highlight` có từ khóa `!important` nên nó có quyền ưu tiên cao nhất do đó color có màu green.
+
+2. "Mô tả sản phẩm":
+- `color = blue`
+    - Selector `.card p` có thuộc tính `color: inherit;` vì từ khóa `inherit` buộc phần tử lấy giá trị màu từ phần tử cha trực tiếp là `<div class="card" id="featured">.` do selector `.card {color: blue;}` nên `p` có màu blue.
+
+3. "Sản phẩm B"(thẻ h2):
+- `font-size = 20px`
+- `color = blue`
+    - fort-size: Chịu tác động trực tiếp của selector `.card .title` nên có kích thước là 20px.
+    - color: Không có bất kỳ selector trực tiếp nào quy định màu cho thẻ `h2` này. Do thẻ `h2` sẽ kế thừa màu từ phần tử cha gần nhất có khai báo màu là `.card {color: blue;}` nên `h2` có màu blue.
+
+4. "Mô tả sản phẩm B"(thẻ p.highlight)
+- `color = green`
+    - color có sự tranh chấp của `.card p { color: inherit; }` và `.highlight { color: green !important; }` . Do `!important` có quyền ưu tiên cao nhất nên màu hiển thị sẽ là màu green.
