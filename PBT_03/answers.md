@@ -155,3 +155,15 @@ Nâng cao: Nếu .box-a có margin-bottom: -10px và .box-b có margin-top: 40px
     - ID Selector: `#contact`
     - Descendant Selector: `nav ul li`, `table th`, `table thead tr`
     - Pseudo-class: `:hover`, `:nth-child(even)`
+
+### Câu B2: Box Model Lab
+#### Phần 1 — Chứng minh content-box vs border-box
+- Hộp 1 (content-box): chiều rộng thực tế = 349.6 px (đo từ DevTools)
+- Hộp 2 (border-box): chiều rộng thực tế = 300 px (đo từ DevTools)
+- Giải thích sự khác biệt: 
+    - `content-box` cộng thêm padding và border vào kích thước gốc làm hộp to ra.
+    - `border-box` bao gồm cả padding và border vào kích thước đã định sẵn, giúp hộp giữ nguyên độ rộng.
+
+#### Phần 2 — Layout 3 cột
+- Khi không dùng `content-box`, chiều rộng thực tế của 3 cột sẽ là: `250+15x2 + 500+20x2 + 250+15x2 = 1100px`
+- Vì 1100px > 1000px nên cột Ads sẽ bị đẩy xuống gây vỡ layout.
