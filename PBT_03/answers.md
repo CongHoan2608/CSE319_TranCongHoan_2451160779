@@ -103,3 +103,25 @@ Nâng cao: Nếu .box-a có margin-bottom: -10px và .box-b có margin-top: 40px
 4. Nếu Rule A thêm `!important`:
 - element sẽ có màu 'black(đen)'.
 - Vì selector `!important` có độ ưu tiên cao nhất(specificity=vô cực), trong CSS nó ghi đè lên tất cả các quy tắc về độ ưu tiên thông thường nên khi thêm nó vào Rule A thì style của nó được áp dụng lên phần tử.
+
+## Phần C
+### Câu C1: Debug CSS Layout
+1. Tính chiều rộng thực tế của sidebar và content (content-box!):
+- Sidebar = 300 + 20 x 2 + 1 x 2 = 342px
+- Content = 660 + 30 x 2 + 1 x 2 = 722px
+
+2. Layout bị vỡ vì:
+- Tổng chiều rộng thức tế của hai khối lớn hơn chiều rộng container.
+- Tổng chiều rộng Sidebar + Content = 342 + 722 = 1064px
+- Chiều rộng của .container = 960px
+- Do 1064px > 960px, không gian trong container không đủ nên layout bị vỡ.
+
+3. Đưa ra 2 cách sửa khác nhau (1 cách dùng border-box, 1 cách không dùng):
+- Cách 1 dùng border-box:
+    - Dùng `box-sizing: border-box;` để trình duyệt tự tính toán lại kịch thước lõi nhưng giữ nguyên width tổng thể.
+    - Thêm `box-sizing: border-box;` cho cả sidebar và content. Lúc này tổng chiều rộng sẽ là `300px + 660px = 960px` vừa với container.
+
+- Cách 2 không dùng border-box (Tính toán thủ công):
+    - Ta trừ bớt width đi đúng bằng khoảng padding và border để tổng chiều rộng thực tế bằng width tổng thể.
+    - Sidebar mới: width = 300 - 20x2 - 1x2 = 258px
+    - Content mới: width = 660 - 20x2 - 1x2 = 598px
