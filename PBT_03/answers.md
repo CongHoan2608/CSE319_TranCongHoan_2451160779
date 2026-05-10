@@ -167,3 +167,24 @@ Nâng cao: Nếu .box-a có margin-bottom: -10px và .box-b có margin-top: 40px
 #### Phần 2 — Layout 3 cột
 - Khi không dùng `content-box`, chiều rộng thực tế của 3 cột sẽ là: `250+15x2 + 500+20x2 + 250+15x2 = 1100px`
 - Vì 1100px > 1000px nên cột Ads sẽ bị đẩy xuống gây vỡ layout.
+
+### Câu B3: Specificity Battle
+1. Liệt kê 10 rules + specificity score:
+    - `p` (red) :                   `specificity score: 0, 0, 1` (1 Element)
+    - `body p` (orange) :           `specificity score: 0, 0, 2` (2 Element)
+    - `html body p` (gray) :        `specificity score: 0, 0, 3` (3 Element)
+    - `.text` (blue) :              `specificity score: 0, 1, 0` (1 Class)
+    - `p.text` (pink) :             `specificity score: 0, 1, 1` (1 Class + 1 Element)
+    - `.text.highlight` (gold) :    `specificity score: 0, 2, 0` (2 Class)
+    - `p.text.highlight` (silver) : `specificity score: 0, 2, 1` (2 Class + 1 Element)
+    - `#demo` (black) :             `specificity score: 1, 0, 0` (1 ID)
+    - `p#demo` (lightblue) :        `specificity score: 1, 0, 1` (1 ID + 1 Element)
+    - `#demo.text` (violet) :       `specificity score: 1, 1, 0` (1 ID + 1 Class)
+
+2. Element cuối cùng hiển thị màu gì? Tại sao?
+ - Element cuối cùng hiển thị màu `violet`
+ - Vì rule 10 có  điểm specificity cao nhất (1, 1, 0). Trong CSS, khi có nhiều quy tắc cùng nhắm 1 dối tượng, thì trình duyệt sẽ chọn rule có điểm specificity cao nhất làm ưu tiên.
+
+ 4. Thay đổi thứ tự rules trong file CSS, kết quả có đổi không?
+ - Kết quả không thay đổi
+ - Vì thứ tự trước sau không tác động đến điểm specificity. Mà trình duyệt chọn màu theo điểm specificity nên dù đổi vị trí thế nào thì nó vẫn luôn chọn rule có điểm cao nhất.

@@ -1,0 +1,10 @@
+p { color: red; }                  /* 0,0,1 */
+body p { color: orange; }            /* 0,0,2 */
+html body p { color: gray; }         /* 0,0,3 */
+.text { color: blue; }               /* 0,1,0 */
+p.text { color: pink; }            /* 0,1,1 */
+.text.highlight { color: gold; }     /* 0,2,0 */
+p.text.highlight { color: silver; }   /* 0,2,1 */
+#demo { color: black; }             /* 1,0,0 */
+p#demo { color: lightblue; }              /* 1,0,1 */
+#demo.text { color: green; }         /* 1,1,0 */
