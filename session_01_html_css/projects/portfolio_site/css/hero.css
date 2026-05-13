@@ -12,7 +12,7 @@
 .cta-button {
     display: inline-block;
     padding: 15px 35px; /* Box Model: padding */
-    background: white;
+    background: rgb(41, 28, 28);
     color: var(--color-primary);
     border-radius: 50px;
     font-weight: bold;
