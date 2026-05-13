@@ -1,0 +1,40 @@
+.skills-section {
+    padding: 100px 0;
+    background-color: var(--color-light);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.skill-name {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+    height: 12px; 
+    background: #e2e8f0; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); /* Progress fill specs */
+    width: 0;
+    animation: fillBars 1.5s ease-out forwards;
+}
+
+@keyframes fillBars {
+    to { width: var(--target-width); }
+}
