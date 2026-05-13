@@ -17,13 +17,15 @@
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
 }
 .portfolio-item {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .portfolio-item img {
@@ -32,6 +34,12 @@
     object-fit: cover;
     transition: transform 0.4s ease;
     display: block; 
+}
+
+.portfolio-section {
+    padding: 100px 0;
+    background-color: #f8fafc;
+    text-align: center;
 }
 
 .portfolio-item:hover img {

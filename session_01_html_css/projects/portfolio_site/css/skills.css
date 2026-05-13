@@ -35,6 +35,24 @@
     animation: fillBars 1.5s ease-out forwards;
 }
 
+.skill-percent {
+    font-weight: bold;
+    color: var(--color-primary); /* Số % màu tím giống ảnh */
+}
+
+.skill-item {
+    background: #ffffff;
+    padding: 1.5rem; 
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
 @keyframes fillBars {
     to { width: var(--target-width); }
 }

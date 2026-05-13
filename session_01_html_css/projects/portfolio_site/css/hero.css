@@ -1,5 +1,6 @@
 .hero {
-    min-height: 100vh;
+    min-height: 60vh;
+    background: var(--color-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,12 +8,20 @@
     text-align: center;
 }
 
-.hero h1{ font-size: 3.5rem; margin-bottom: 1rem; }
+.hero h1{ font-size: 3.5rem; margin-bottom: 1rem; color: white; }
+
+.hero h1 .highlight {
+    color: #fbbf24;
+}
+
+.hero p{
+    color: white;
+}
 
 .cta-button {
     display: inline-block;
-    padding: 15px 35px; /* Box Model: padding */
-    background: rgb(41, 28, 28);
+    padding: 15px 35px;
+    background: white;
     color: var(--color-primary);
     border-radius: 50px;
     font-weight: bold;

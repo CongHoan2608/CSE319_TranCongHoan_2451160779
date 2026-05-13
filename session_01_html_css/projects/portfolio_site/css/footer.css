@@ -1,7 +1,7 @@
 .footer {
     background: var(--color-dark);
     color: white;
-    padding: 3rem 0 1.5rem;
+    padding: 4rem 0 2rem;
 }
 
 .footer-content {
@@ -10,13 +10,14 @@
     gap: 2rem;
     text-align: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .footer-logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--color-primary);
+    color: var(--color-light);
+    text-align: left;
 }
 
 .footer-tagline {
@@ -25,7 +26,7 @@
 
 .social-links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 1rem;
 }
 
@@ -47,15 +48,19 @@
 }
 
 .footer-bottom {
-    text-align: center;
+    text-align: left;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #cbd5e1;
-    font-size: 0.9rem;
+    border-top: 1px solid rgba(133, 130, 130, 0.1);
+    color: var(--color-light);
+    font-size: 0.6rem;
 }
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+    .footer-logo, .social-links {
+        text-align: center;
+        justify-content: center; /* Căn giữa lại khi ở chế độ mobile */
     }
 }

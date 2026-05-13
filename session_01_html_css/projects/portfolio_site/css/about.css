@@ -5,7 +5,7 @@
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr; /* 2-column layout */
+    grid-template-columns: 1fr 1.5fr;
     gap: 3rem;
     align-items: center;
 }
@@ -15,8 +15,8 @@
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid var(--color-light);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border: 5px solid var(--color-primary);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
 }
 
 .about-content h2 {
@@ -31,6 +31,7 @@
     color: var(--color-primary);
     margin-bottom: 1rem;
 }
+
 
 @media (max-width: 768px) {
     .about-grid {
