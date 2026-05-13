@@ -38,3 +38,7 @@
 @keyframes fillBars {
     to { width: var(--target-width); }
 }
+
+@media (max-width: 768px) {
+    .skills-grid { grid-template-columns: 1fr; }
+}
