@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="hero.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
     <header>
@@ -40,7 +41,7 @@
                 <div class="about-grid">
                     <div class="about-image">
                         <!-- Thay placeholder bằng ảnh của bạn nếu có -->
-                        <img src="https://inkythuatso.com/uploads/thumbnails/800/2023/03/8-anh-dai-dien-trang-inkythuatso-03-15-26-54.jpg" alt="Trần Công Hoan Profile">
+                        <img src="https://inkythuatso.com//800//8-anh-dai-dien-trang-inkythuatso-03-15-26-54.jpg" alt="Trần Công Hoan Profile">
                     </div>
                     <div class="about-content">
                         <h2>About Me</h2>
@@ -84,7 +85,106 @@
             </div>
         </section>
 
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <h2>My Portfolio</h2>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Web</button>
+                    <button class="filter-btn">Mobile</button>
+                    <button class="filter-btn">Design</button>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <!-- Item 1: Web -->
+                    <div class="portfolio-item" data-category="web">
+                        <a href="#lightbox-1" class="lightbox-link">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.8MDGcl20ERm3nyeXbZrCiQHaEo?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project 1">
+                            <div class="portfolio-overlay">
+                                <h3>E-Commerce Website</h3>
+                                <p>React + Node.js</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Item 2: Web -->
+                    <div class="portfolio-item" data-category="web">
+                        <a href="#lightbox-2" class="lightbox-link">
+                            <img src="https://thfvnext.bing.com/th/id/OIP.wTNM8Ik-Z9CnUyuyY17cBAHaEo?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project 2">
+                            <div class="portfolio-overlay">
+                                <h3>Personal Blog</h3>
+                                <p>Vue + Firebase</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Item 3: Web -->
+                    <div class="portfolio-item" data-category="web">
+                        <a href="#lightbox-3" class="lightbox-link">
+                            <img src="https://thfvnext.bing.com/th/id/OIP.SKvKLNMWtAudWlhh__hdUAHaE8?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project 3">
+                            <div class="portfolio-overlay">
+                                <h3>Admin Dashboard</h3>
+                                <p>HTML + CSS + JS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Item 4: Mobile -->
+                    <div class="portfolio-item" data-category="mobile">
+                        <a href="#lightbox-4" class="lightbox-link">
+                            <img src="https://thfvnext.bing.com/th/id/OIP.OiAnawKuvXR2Wmy8MUv4QQHaEK?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project 4">
+                            <div class="portfolio-overlay">
+                                <h3>Delivery App</h3>
+                                <p>React Native</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Item 5: Mobile -->
+                    <div class="portfolio-item" data-category="mobile">
+                        <a href="#lightbox-5" class="lightbox-link">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.JX2jGR_MYTEtJ0uRtma_5wHaE4?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project 5">
+                            <div class="portfolio-overlay">
+                                <h3>Fitness Tracker</h3>
+                                <p>Flutter</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Item 6: Design -->
+                    <div class="portfolio-item" data-category="design">
+                        <a href="#lightbox-6" class="lightbox-link">
+                            <img src="https://thfvnext.bing.com/th/id/OIP.FBsnh2JOIPKVcQR-CycqvAHaEo?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project 6">
+                            <div class="portfolio-overlay">
+                                <h3>Brand Identity</h3>
+                                <p>Figma</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Lightbox Modals-->
+            <div id="lightbox-1" class="lightbox">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.8MDGcl20ERm3nyeXbZrCiQHaEo?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project 1">
+                <a href="#portfolio" class="lightbox-close">&times;</a>
+            </div>
+            <div id="lightbox-2" class="lightbox">
+                <img src="https://thfvnext.bing.com/th/id/OIP.wTNM8Ik-Z9CnUyuyY17cBAHaEo?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project 2">
+                <a href="#portfolio" class="lightbox-close">&times;</a>
+            </div>
+            <div id="lightbox-3" class="lightbox">
+                <img src="https://thfvnext.bing.com/th/id/OIP.SKvKLNMWtAudWlhh__hdUAHaE8?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project 3">
+                <a href="#portfolio" class="lightbox-close">&times;</a>
+            </div>
+            <div id="lightbox-4" class="lightbox">
+                <img src="https://thfvnext.bing.com/th/id/OIP.OiAnawKuvXR2Wmy8MUv4QQHaEK?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project 4">
+                <a href="#portfolio" class="lightbox-close">&times;</a>
+            </div>
+            <div id="lightbox-5" class="lightbox">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.JX2jGR_MYTEtJ0uRtma_5wHaE4?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project 5">
+                <a href="#portfolio" class="lightbox-close">&times;</a>
+            </div>
+            <div id="lightbox-6" class="lightbox">
+                <img src="https://thfvnext.bing.com/th/id/OIP.FBsnh2JOIPKVcQR-CycqvAHaEo?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project 6">
+                <a href="#portfolio" class="lightbox-close">&times;</a>
+            </div>
+        </section>
 
     </main>
 </body>
