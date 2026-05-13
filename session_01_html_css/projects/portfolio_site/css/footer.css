@@ -23,7 +23,6 @@
     color: #cbd5e1;
 }
 
-/* Social Links styling */
 .social-links {
     display: flex;
     justify-content: center;
@@ -53,4 +52,10 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #cbd5e1;
     font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
