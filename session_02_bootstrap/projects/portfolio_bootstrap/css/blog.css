@@ -168,3 +168,22 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
     border-bottom: 1px solid #f1f5f9;
 }
+
+.hero-text {
+    font-size: clamp(1.5rem, 4vw, 2.5rem); 
+    line-height: 1.4;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+
+.py-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+@media (max-width: 768px) {
+    .py-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
