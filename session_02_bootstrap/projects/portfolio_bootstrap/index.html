@@ -26,71 +26,173 @@
     </nav>
 
     <main>
-        <section class="hero container">
-            <h1>Hi, I'm Công Hoan</h1>
-            <p>Full-Stack Developer | UI Designer | Problem Solver</p>
-            <a href="#portfolio">View My Work</a>
+        <section class="min-vh-100 d-flex align-items-center justify-content-center text-center text-white" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">
+            <div class="container">
+                <h1 class="display-3 fw-bold mb-3">Hi, I'm <span class="text-warning">Công Hoan</span></h1>
+                <p class="lead mb-4 opacity-75">Full-Stack Developer | UI Designer | Problem Solver</p>
+                <a href="#portfolio" class="btn btn-light btn-lg px-4 py-2 fw-bold text-primary rounded-pill shadow">View My Work</a>
+            </div>
         </section>
 
-        <section id="about" class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <img src="https://thfvnext.bing.com/th/id/OIP.vg41yG82qw84ziz5nS-CWQHaHa?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Trần Công Hoan Profile" class="img-fluid">
+        <section id="about" class="py-5 bg-white">
+            <div class="container py-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5 text-center">
+                        <img src="https://thfvnext.bing.com/th/id/OIP.vg41yG82qw84ziz5nS-CWQHaHa?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Trần Công Hoan Profile" class="rounded-circle img-fluid border border-5 border-primary shadow" style="max-width: 300px; aspect-ratio: 1/1; object-fit: cover;">
+                    </div>
                 </div>
                 <div class="col-md-7">
-                    <h2>About Me</h2>
-                    <p>I'm a passionate developer with 3+ years of experience building web applications.</p>
-                    <p>Specialized in Frontend development with React and Vue. Also experienced in Backend with Node.js and Python. I love badminton and gaming in my free time.</p>
+                    <h2 class="fw-bold mb-4"> About Me </h2>
+                    <p class="text-muted">I'm a passionate developer with 3+ years of experience building web applications.</p>
+                    <p class="text-muted">Specialized in Frontend development with React and Vue. Also experienced in Backend with Node.js and Python. I love badminton and gaming in my free time.</p>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="container">
-            <h2>My Skills</h2>
-            <div class="row">
-                <div class="col-md-6">HTML5 - 95%</div>
-                <div class="col-md-6">CSS3 - 90%</div>
-                <div class="col-md-6">JavaScript - 85%</div>
-                <div class="col-md-6">React - 80%</div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="container">
-            <h2>My Portfolio</h2>
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4">Project 1: E-Commerce Website</div>
-                <div class="col-12 col-md-6 col-lg-4">Project 2: Personal Blog</div>
-                <div class="col-12 col-md-6 col-lg-4">Project 3: Admin Dashboard</div>
-                <div class="col-12 col-md-6 col-lg-4">Project 4: Delivery App</div>
-                <div class="col-12 col-md-6 col-lg-4">Project 5: Fitness Tracker</div>
-                <div class="col-12 col-md-6 col-lg-4">Project 6: Brand Identity</div>
-            </div>
-        </section>
-
-        <section id="contact" class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <h3>Contact Information</h3>
-                    <p>your.email@example.com</p>
-                    <p>Hanoi, Vietnam</p>
+        <section id="skills" class="py-5 bg-light">
+            <div class="container py-5">
+                <h2 class="text-center fw-bold mb-5">My Skills</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="bg-white p-4 rounded-3 shadow-sm">
+                            <div class="d-flex justify-content-between mb-2"><span class="fw-bold">HTML5</span><span class="text-primary fw-bold">95%</span></div>
+                            <div class="progress" style="height: 12px;"><div class="progress-bar bg-primary" style="width: 95%"></div></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg-white p-4 rounded-3 shadow-sm">
+                            <div class="d-flex justify-content-between mb-2"><span class="fw-bold">CSS3</span><span class="text-primary fw-bold">90%</span></div>
+                            <div class="progress" style="height: 12px;"><div class="progress-bar bg-primary" style="width: 90%"></div></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg-white p-4 rounded-3 shadow-sm">
+                            <div class="d-flex justify-content-between mb-2"><span class="fw-bold">JavaScript</span><span class="text-primary fw-bold">85%</span></div>
+                            <div class="progress" style="height: 12px;"><div class="progress-bar bg-primary" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg-white p-4 rounded-3 shadow-sm">
+                            <div class="d-flex justify-content-between mb-2"><span class="fw-bold">React</span><span class="text-primary fw-bold">80%</span></div>
+                            <div class="progress" style="height: 12px;"><div class="progress-bar bg-primary" style="width: 80%"></div></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-7">
-                    <form>
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email">
-                        <textarea placeholder="Message"></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-5 bg-white">
+            <div class="container py-5">
+                <h2 class="text-center fw-bold mb-5">My Portfolio</h2>
+                <div class="d-flex justify-content-center gap-2 mb-5 flex-wrap">
+                    <button class="btn btn-primary rounded-pill px-4">All</button>
+                    <button class="btn btn-outline-primary rounded-pill px-4">Web</button>
+                    <button class="btn btn-outline-primary rounded-pill px-4">Mobile</button>
+                    <button class="btn btn-outline-primary rounded-pill px-4">Design</button>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.8MDGcl20ERm3nyeXbZrCiQHaEo?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Project 1" style="aspect-ratio: 4/3; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">E-Commerce Website</h5><p class="text-muted">React + Node.js</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://thfvnext.bing.com/th/id/OIP.wTNM8Ik-Z9CnUyuyY17cBAHaEo?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Project 2" style="aspect-ratio: 4/3; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Personal Blog</h5><p class="text-muted">Vue + Firebase</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://thfvnext.bing.com/th/id/OIP.SKvKLNMWtAudWlhh__hdUAHaE8?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Project 3" style="aspect-ratio: 4/3; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Admin Dashboard</h5><p class="text-muted">HTML + CSS + JS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://thfvnext.bing.com/th/id/OIP.OiAnawKuvXR2Wmy8MUv4QQHaEK?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Project 4" style="aspect-ratio: 4/3; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Delivery App</h5><p class="text-muted">React Native</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.JX2jGR_MYTEtJ0uRtma_5wHaE4?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Project 5" style="aspect-ratio: 4/3; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Fitness Tracker</h5><p class="text-muted">Flutter</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://thfvnext.bing.com/th/id/OIP.FBsnh2JOIPKVcQR-CycqvAHaEo?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Project 6" style="aspect-ratio: 4/3; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Brand Identity</h5><p class="text-muted">Figma</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5 bg-light">
+            <div class="container py-5">
+                <h2 class="text-center fw-bold mb-5">Get In Touch</h2>
+                <div class="row g-5">
+                    <div class="col-lg-4">
+                        <h4 class="fw-bold mb-3">Contact Information</h4>
+                        <p class="text-muted mb-4">Feel free to reach out. I'm always open to discussing new projects.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="bi bi-envelope text-primary me-2"></i> your.email@example.com</li>
+                            <li><i class="bi bi-geo-alt text-primary me-2"></i> Hanoi, Vietnam</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="bg-white p-4 rounded-4 shadow-sm">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Name</label>
+                                    <input type="text" class="form-control" placeholder="John Doe" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Email</label>
+                                    <input type="email" class="form-control" placeholder="john@example.com" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold">Message</label>
+                                    <textarea class="form-control" rows="5" placeholder="Tell me about your project..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 fw-bold">Send Message &rarr;</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="container">
-        <div class="row">
-            <div class="col-4">Công Hoan</div>
-            <div class="col-4">Building digital experiences</div>
-            <div class="col-4">Icons (GitHub, LinkedIn, Email)</div>
+    <footer class="bg-dark text-white py-5"">
+        <div class="container">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-4 text-center text-md-start"><h4 class="fw-bold text-primary mb-0">Công Hoan</h4></div>
+                <div class="col-md-4 text-center"><p class="text-secondary mb-0">Building digital experiences</p></div>
+                <div class="col-md-4 text-center text-md-end">
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-github"></i></a>
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white fs-4"><i class="bi bi-envelope-fill"></i></a>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-4 text-center text-secondary">
+                <small>&copy; 2026 Trần Công Hoan. All rights reserved.</small>
+            </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
