@@ -122,3 +122,28 @@
 .blog-item {
     border-radius: 16px;
 }
+
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;           
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0f172a;            
+}
+
+.text-muted {
+    color: #64748b !important;  
+}
+
+.card, .navbar, .blog-item {
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08) !important;
+    border: 1px solid #e2e8f0; 
+}
+
+
+.sidebar-widget {
+    border-color: #e2e8f0;
+}
