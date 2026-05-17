@@ -1,0 +1,35 @@
+.comment-item img.rounded-circle {
+    width: 60px !important; 
+    height: 60px !important; 
+    object-fit: cover;      
+    flex-shrink: 0;         
+}
+
+.comment.reply img.rounded-circle {
+    width: 45px !important; 
+    height: 45px !important;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.comment.reply {
+    border-left: 3px solid #f0f0f0; 
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.btn-link {
+    font-size: 0.85rem;
+    padding-left: 0;
+}
+
+@media (max-width: 576px) {
+    .comment.reply {
+        margin-left: 0.5rem !important; 
+        padding-left: 1rem;
+    }
+    .avatar-main { 
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
