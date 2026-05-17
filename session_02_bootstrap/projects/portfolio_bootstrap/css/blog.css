@@ -14,10 +14,26 @@
 .blog-item:hover .overlay-title { transform: translateY(0); }
 .bg-purple { background-color: #ce93f9; }
 .bg-red { background-color: #ff3008; }
+.bg-green { background-color: #58cc02; }
 
 .sticky-top {
     position: -webkit-sticky;
     position: sticky;
     top: 100px !important;
     z-index: 10;
+}
+
+.overlay-category {
+    color: #ccc;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    transform: translateY(20px); 
+    transition: transform 0.5s ease;
+}
+
+
+.blog-item:hover .overlay-category {
+    transform: translateY(0);
 }
