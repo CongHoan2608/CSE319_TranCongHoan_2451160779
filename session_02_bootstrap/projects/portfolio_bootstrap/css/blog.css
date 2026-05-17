@@ -147,3 +147,24 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar-widget {
     border-color: #e2e8f0;
 }
+
+.navbar-brand {
+    color: #0f172a;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.nav-link:hover {
+    color: var(--bs-primary) !important; 
+}
+
+.nav-link.active {
+    color: #000 !important;
+}
+
+.navbar {
+    border-bottom: 1px solid #f1f5f9;
+}
