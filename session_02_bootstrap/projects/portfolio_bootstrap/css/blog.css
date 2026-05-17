@@ -14,3 +14,10 @@
 .blog-item:hover .overlay-title { transform: translateY(0); }
 .bg-purple { background-color: #ce93f9; }
 .bg-red { background-color: #ff3008; }
+
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px !important;
+    z-index: 10;
+}
