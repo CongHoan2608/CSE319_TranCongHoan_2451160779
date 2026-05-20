@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 80px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    position: sticky;  
+    top: 80px;         
+    width: 250px;
+    height: 200px;    
+    background-color: #f0f0f0;
+    padding: 15px;
+}
+
+.content {
+    flex: 1;
+}
+
+.product-card {
+    position: relative;
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.img-box {
+    width: 100%;
+    height: 150px;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 150px;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.scroll-space {
+    margin-top: 30px;
+    height: 1200px;
+    background-color: #fafafa;
+    padding: 20px;
+    border: 1px dashed #bbb;
+}
+
+.scroll-btn {
+    position: fixed;   
+    bottom: 20px;
+    right: 20px;       
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
