@@ -70,3 +70,59 @@
     - Partials & Import: Chia nhỏ CSS thành nhiều file nhỏ gọn (bắt đầu bằng dấu _) và gom lại bằng @import.
 
 - Trình duyệt không đọc được file .scss vì trình duyệt chỉ hiểu ngôn ngữ CSS thuần. Để trang web chạy được, cần có bước compile (biên dịch) từ SCSS sang CSS thông qua các trình biên dịch (như extension Live Sass Compiler trên VS Code).
+
+## Phần C
+### Câu C1: Phân tích trang web thực
+- Navigation thay đổi thế nào: Trên Mobile (375px), menu trái rút gọn thành dạng mini (chỉ có icon). Thanh tìm kiếm dài bị thu thành một icon kính lúp. Trên Desktop (1440px), menu trái hiển thị đầy đủ chữ và có thanh tìm kiếm to nằm giữa màn hình.
+- Lưới content thay đổi mấy cột: Mobile hiển thị 1 cột. Tablet (768px) hiển thị 2 đến 3 cột. Desktop (1440px) hiển thị 4 đến 5 cột.
+- Elements nào bị ẩn trên mobile: Thanh nhập text tìm kiếm (chỉ còn icon), các text chi tiết của danh mục menu bên trái.
+- Font size có thay đổi. Kích thước chữ của tiêu đề video trên mobile được thu nhỏ hơn so với desktop để tránh bị rớt dòng quá nhiều.
+
+### Câu C2: Thiết kế Responsive Strategy
+- Sơ đồ bố cục (Wireframe):
+    - Mobile (< 768px):
+    - Những gì bị ẩn? Menu chữ bị ẩn đi (thay bằng icon Hamburger ☰).
+    - Form nằm đâu? Tất cả xếp 1 cột dọc. Form nằm ngay dưới Hero Image (trên grid ảnh và map).
+
+    - Tablet (≥ 768px):
+        - Grid ảnh mấy cột? Chia thành 2 cột (hoặc 3 cột).
+        - Bản đồ nằm đâu? Nằm ngay dưới Form đặt bàn, kéo dài full chiều ngang màn hình.
+
+    - Desktop (≥ 1024px):
+        - Layout bao nhiêu cột? Layout phần đặt bàn chia 2 cột (bên trái 50%,bên phải 50%). Grid ảnh chia 3 cột.
+        - Sidebar có không? Không cần Sidebar để không gian tập trung cho Form và Grid ảnh.
+
+- CSS :
+```
+css
+/*Mobile-First*/
+.food-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.booking-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/*Tablet (≥ 768px)*/
+@media (min-width: 768px) {
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*Destop (≥ 1024px)*/
+@media (min-width: 1024px) {
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .booking-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+```
