@@ -1,0 +1,43 @@
+.header {
+  background-color: #f7fafc;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .logo {
+  font-family: "Arial", sans-serif;
+  color: #3182ce;
+}
+
+.card {
+  padding: 16px;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card .card-title {
+  font-size: 18px;
+  color: #3182ce;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+.card.featured {
+  border: 2px solid #3182ce;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+.header {
+    background-color: $secondary-color;
+    padding: $spacing-md;
+    @include flex-center;
+
+    .logo {
+        font-family: $font-primary;
+        color: $primary-color;
+    }
+}
+
+.card {
+    padding: $spacing-md;
+    margin-bottom: $spacing-sm;
+    @include card-shadow;
+
+    .card-title {
+        font-size: 18px;
+        color: $primary-color;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+
+    &.featured {
+        border: 2px solid $primary-color;
+    }
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+
+    @include respond-to($breakpoint-tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to($breakpoint-desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

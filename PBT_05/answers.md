@@ -126,3 +126,7 @@ css
     }
 }
 ```
+
+## Phần B
+### Câu B3:
+- Dùng Live Sass Compiler trên VS Code. Chỉ cần click nút Watch Sass ở thanh trạng thái dưới cùng, file `style.scss` sẽ tự động biên dịch ra `style.css`.
