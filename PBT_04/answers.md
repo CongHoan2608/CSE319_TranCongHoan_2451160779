@@ -51,3 +51,83 @@
     | 4 | 5 | 6 |
     | 7 |
     ```
+
+## Phần C
+### Câu C1: Flexbox vs Grid: Khi nào dùng gì?
+- Cho 5 tình huống layout thực tế. Với mỗi tình huống:
+    1. Navigation bar ngang (logo + menu + buttons)
+        - Dùng `Flexbox`
+        - Vì: 
+            - Bố cục thanh điều hướng mang tính chất căn chỉnh một chiều.
+            - Nên cần được co giãn linh hoạt bằng `justify-content: space-between hoặc gap`,
+    2. Lưới ảnh Instagram (3 cột đều nhau, số ảnh không biết trước)
+        - Dùng `Grid`
+        - Vì :
+            - Đây là bố cục hai chiều
+            - Gird sẽ giúp tạo các cột đều nhau và tự xuống hàng đẹp
+    3. Layout blog: main content + sidebar
+        - Dùng `Grid`
+        - Vì :
+            - Đây là bố cục tổng thể có tỷ lệ cột cố định.
+            - Nên nó thích hợp quản lí khung bố cục tổng thể. 
+    4. Footer với 4 cột thông tin (Về chúng tôi, Liên kết, Hỗ trợ, Liên hệ)
+        - Dùng `Grid`
+        - Vì :
+            - Đây là bố cục rõ ràng và cần chia đều cột.
+            - Nên dùng grid để nó tự rớt dòng với auto-fit.
+    5. Card sản phẩm (ảnh trên, text giữa, nút dưới — nút luôn dính đáy)
+        - Dùng `Flexbox`
+        - Vì :
+            - Cần định hướng dòng cho phần tử theo trục dọc.
+            - Nên dùng nó để đẩy nút bấm luôn dính sát đáy.
+
+### Câu C2: Debug Flexbox
+- Lỗi 1: Cards không đều chiều cao — nút "Mua" bị nhảy lên/xuống
+    - Do các card có lượng text khác nhau nên chiều cao mỗi card khác nhau do đó nút `.btn` không nằm cùng hàng.
+    - Sửa:
+    ```
+    css
+    .card-container { 
+        display: flex; 
+        flex-wrap: wrap; 
+    }
+    .card { 
+        width: 30%; 
+        margin: 1.5%; 
+        display: flex;         /* SỬA: Biến card thành flex */
+        flex-direction: column;/* SỬA: Xếp theo chiều dọc */
+    }
+    .card img { width: 100%; }
+    .card h3 { font-size: 18px; }
+    .card .btn { 
+        padding: 10px; 
+        margin-top: auto;      /* SỬA: Ép nút luôn dính đáy card */
+    }
+    ```
+- Lỗi 2: Muốn items nằm giữa cả ngang lẫn dọc trong container 100vh, nhưng item vẫn dính góc trái trên
+    - Do mới chỉ khai báo `display: flex` cho .hero mà chưa có các lệnh căn chỉnh vị trí các phần tử con bên trong.
+    - Sửa:
+    ```
+    css
+    .hero {
+        height: 100vh;
+        display: flex;
+        justify-content: center; /* SỬA: Căn giữa theo chiều ngang */
+        align-items: center;     /* SỬA: Căn giữa theo chiều dọc */
+    }
+    .hero-content {
+        text-align: center;
+    }
+    ```
+- Lỗi 3: Sidebar bị co lại khi content quá dài
+    - Do cơ chế của  Flexbox, thuộc tính `flex: 1` sẽ bằng `flex-shrink: 1` nên nó sẽ tự động co sidebar để nhường chỗ cho text dài ở content.
+    - Sửa:
+    ```
+    css
+    .layout { display: flex; }
+    .sidebar { 
+        width: 250px; 
+        flex-shrink: 0; /* SỬA: Ngăn không cho sidebar bị co bóp diện tích */
+    }
+    .content { flex: 1; }
+    ```
