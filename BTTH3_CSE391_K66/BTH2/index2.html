@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Công Việc Cá Nhân</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quản Lý Công Việc</h1>
+
+        <div class="statistics">
+            <div class="stat-box blue">Tổng cộng: <span id="totalTasks">0</span></div>
+            <div class="stat-box green">Đã hoàn thành: <span id="completedTasks">0</span></div>
+            <div class="stat-box red">Chưa hoàn thành: <span id="pendingTasks">0</span></div>
+        </div>
+
+        <div class="header-actions">
+            <button id="btnOpenAddForm" class="btn btn-primary">Thêm công việc</button>
+            <div id="notification" class="hidden"></div>
+        </div>
+
+        <div id="taskList" class="task-grid">
+            </div>
+    </div>
+
+    <div id="taskModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="btnCloseForm">&times;</span>
+            <h2 id="modalTitle">Thêm Công Việc Mới</h2>
+            
+            <form id="taskForm">
+                <input type="hidden" id="editTaskId" value="">
+
+                <div class="form-group">
+                    <label>Tiêu đề công việc:</label>
+                    <input type="text" id="taskTitle" placeholder="Nhập tiêu đề...">
+                    <span class="error-message" id="errorTitle"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Mô tả ngắn:</label>
+                    <textarea id="taskDesc" rows="3" placeholder="Nhập mô tả..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Hạn hoàn thành:</label>
+                    <input type="date" id="taskDate">
+                    <span class="error-message" id="errorDate"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Mức ưu tiên:</label>
+                    <select id="taskPriority">
+                        <option value="Thấp">Thấp</option>
+                        <option value="Trung bình" selected>Trung bình</option>
+                        <option value="Cao">Cao</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="btnSubmit" class="btn btn-success">Lưu công việc</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="main2.js"></script>
+</body>
+</html>
