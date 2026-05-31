@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard & Accessibility</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h2>Gallery Ảnh (Bấm Phím 1-9, ←, →, Space)</h2>
+        <div id="galleryContainer" class="gallery" aria-label="Khu vực xem ảnh">
+            <button id="prevBtn" aria-label="Xem ảnh trước đó">⬅️</button>
+            <img id="galleryImg" src="https://placehold.co/400x300?text=Image+1" alt="Ảnh đang hiển thị" tabindex="0">
+            <button id="nextBtn" aria-label="Xem ảnh tiếp theo">➡️</button>
+        </div>
+        <p id="statusText" aria-live="polite">Trạng thái: Tạm dừng</p>
+        <p class="hint">Gợi ý: Bấm <code>Ctrl + K</code> để mở Command Palette</p>
+    </main>
+
+    <div id="cmdPalette" class="modal hidden" role="dialog" aria-label="Menu lệnh tìm kiếm">
+        <div class="modal-content">
+            <input type="text" id="cmdInput" placeholder="Tìm kiếm lệnh... (Esc để đóng)" aria-label="Ô nhập lệnh tìm kiếm">
+            <ul id="cmdList" aria-label="Danh sách các lệnh">
+                </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
